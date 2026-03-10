@@ -2,38 +2,86 @@ body {
     background-color: #000000;
     color: #ffb000;
     font-family: monospace;
+    padding: 40px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+}
 
-        text-shadow:
-        0 0 5px #ffb000,
-        0 0 10px #ffb000,
-        0 0 20px #ffb000;
+a {
+    color: #ffd060;
+    text-shadow:
+    0 0 5px #ffb000,
+    0 0 10px #ffb000,
+    0 0 20px #ffb000; 
 }
 
 .logo {
     font-size: 18px;
     line-height: 1.1;
     color: #ffb000;
+
+    display: flex;
+    justify-content: center;
+
+    text-shadow:
+    0 0 5px #ffb000,
+    0 0 10px #ffb000,
+    0 0 20px #ffb000;
 }
 
 .active {
-  color: yellow;
+color: #ffd060;
+    text-shadow:
+    0 0 5px #ffb000,
+    0 0 10px #ffb000,
+    0 0 20px #ffb000;  
 }
 
 nav {
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 174, 0, 0.293);
+    border-bottom: 2px solid rgba(255, 174, 0, 0.293);
     padding-bottom: 10px;
 }
 
 .item {
     cursor: pointer;
+    padding-bottom: 2px;
+
+    user-select: none;
 }
 
 .item.active::before {
     content: "> ";
+}
+
+.screen {
+    width: min(700px, 90vw);
+    padding: 60px;
+    border: 2px solid rgba(255,176,0,0.2);
+    background: #080600;
+    box-shadow: 5px 5px 100px rgba(255, 176, 0, 0.08),
+    inset 5px 5px 40px rgba(0, 0, 0, 0.6);
+}
+
+.screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    pointer-events: none;
+    background-image:
+        radial-gradient(rgba(255,255,255,0.35) 0.5px, transparent 0.6px);
+    background-size: 4px 4px;
+}
+
+.screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at top left, rgba(255,255,255,0.05), transparent 40%);
 }
