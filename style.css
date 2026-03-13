@@ -1,8 +1,3 @@
-  @font-face {
-    font-family: 'StarryNight';
-    src: url('assets/fonts/One\ Starry\ Night.ttf');
-}
-  
   :root {
     --board:        #191b1d;
     --raised:       #1f2224;
@@ -20,14 +15,14 @@
 
 body {
     background-color: var(--board);
+    font-family: "Space Grotesk", sans-serif;
     color: var(--accent);
-    padding: 25;
+    padding: 25px;
 }
 
 h1 {
-    font-family: StarryNight;
     font-size: 80px;
-    letter-spacing: 4px;
+    font-weight: 700;
 
     display: flex;
     flex-direction: column;
@@ -36,23 +31,33 @@ h1 {
 }
 
 h2 {
-    font-family: StarryNight;
-    letter-spacing: 4px;
+    font-weight: 600;
 }
 
 #initials {
-    font-family: StarryNight;
+    cursor: pointer;
     font-size: 50px;
-    letter-spacing: 4px;
+    letter-spacing: -5px;
     margin-right: auto;
 }
 
 nav {
     position: sticky;
-    border-bottom: 1px solid var(--accent);
+    top: 0;
+    z-index: 10;
+
+    background-color: var(--board);
+    border-bottom: 3px solid var(--accent);
+    border-radius: 10px;
+    font-weight: 500;
 
     display: flex;
-    align-items: center;
+    align-items: baseline;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
 }
 
 hr {
@@ -64,8 +69,11 @@ html {
 }
 
 .item {
-    font-family: StarryNight;
-    letter-spacing: 4px;
     margin-right: 20px;
     cursor: pointer;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.6;
 }
