@@ -1,8 +1,33 @@
+  @font-face {
+    font-family: 'StarryNight';
+    src: url('assets/fonts/One\ Starry\ Night.ttf');
+}
+  
+  :root {
+    --board:        #191b1d;
+    --raised:       #1f2224;
+    --border:       #2c3033;
+    --border-dash:  #2a2e31;
+    --chalk:        #e4e0d8;
+    --chalk-dim:    #96918b;
+    --chalk-faint:  #474441;
+    --chalk-white:  #f0ebe3;
+    --accent:       #e6c76e;
+    --red:          #cf7368;
+    --blue:         #76a8d0;
+    --green:        #7eb594;
+  }
+
 body {
-    background-color: #000000;
-    color: #ffb000;
-    font-family: monospace;
-    padding: 40px;
+    background-color: var(--board);
+    color: var(--accent);
+    padding: 25;
+}
+
+h1 {
+    font-family: StarryNight;
+    font-size: 80px;
+    letter-spacing: 4px;
 
     display: flex;
     flex-direction: column;
@@ -10,78 +35,37 @@ body {
     align-items: center;
 }
 
-a {
-    color: #ffd060;
-    text-shadow:
-    0 0 5px #ffb000,
-    0 0 10px #ffb000,
-    0 0 20px #ffb000; 
+h2 {
+    font-family: StarryNight;
+    letter-spacing: 4px;
 }
 
-.logo {
-    font-size: 18px;
-    line-height: 1.1;
-    color: #ffb000;
-
-    display: flex;
-    justify-content: center;
-
-    text-shadow:
-    0 0 5px #ffb000,
-    0 0 10px #ffb000,
-    0 0 20px #ffb000;
-}
-
-.active {
-color: #ffd060;
-    text-shadow:
-    0 0 5px #ffb000,
-    0 0 10px #ffb000,
-    0 0 20px #ffb000;  
+#initials {
+    font-family: StarryNight;
+    font-size: 50px;
+    letter-spacing: 4px;
+    margin-right: auto;
 }
 
 nav {
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgba(255, 174, 0, 0.293);
-    padding-bottom: 10px;
+    position: sticky;
+    border-bottom: 1px solid var(--accent);
+
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    background-color: var(--accent);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .item {
+    font-family: StarryNight;
+    letter-spacing: 4px;
+    margin-right: 20px;
     cursor: pointer;
-    padding-bottom: 2px;
-
-    user-select: none;
-}
-
-.item.active::before {
-    content: "> ";
-}
-
-.screen {
-    width: min(700px, 90vw);
-    padding: 60px;
-    border: 2px solid rgba(255,176,0,0.2);
-    background: #080600;
-    box-shadow: 5px 5px 100px rgba(255, 176, 0, 0.08),
-    inset 5px 5px 40px rgba(0, 0, 0, 0.6);
-}
-
-.screen::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.08;
-    pointer-events: none;
-    background-image:
-        radial-gradient(rgba(255,255,255,0.35) 0.5px, transparent 0.6px);
-    background-size: 4px 4px;
-}
-
-.screen::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(ellipse at top left, rgba(255,255,255,0.05), transparent 40%);
 }
