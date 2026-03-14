@@ -14,10 +14,22 @@
   }
 
 body {
-    background-color: var(--board);
     font-family: "Space Grotesk", sans-serif;
     color: var(--accent);
-    padding: 25px;
+    background-color: #0c0d0e;
+}
+
+.screen {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-color: var(--accent);
+    border: 2px solid var(--border);
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: var(--board);
 }
 
 h1 {
@@ -32,6 +44,10 @@ h1 {
 
 h2 {
     font-weight: 600;
+}
+
+h3 {
+    color: var(--chalk-faint);
 }
 
 #initials {
@@ -50,9 +66,11 @@ nav {
     border-bottom: 3px solid var(--accent);
     border-radius: 10px;
     font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
 
     display: flex;
-    align-items: baseline;
+    align-items: center;
 }
 
 nav a {
@@ -71,9 +89,48 @@ html {
 .item {
     margin-right: 20px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 p {
     font-weight: 400;
     line-height: 1.6;
+    color: var(--chalk);
+}
+
+.section-header {
+    margin-top: 48px;
+}
+
+.proj-card {
+    background-color: var(--raised);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    transition: 0.3s;
+    width: 33%;
+}
+
+.proj-card:hover {
+    border-color: var(--accent);
+}
+
+.hero-sub {
+    display: flex;
+    gap: 20px;
+}
+
+.hero {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+h6 {
+    text-align: center;
+    color: var(--chalk-dim);
+    font-weight: 200;
+    margin-top: 100px;
 }
