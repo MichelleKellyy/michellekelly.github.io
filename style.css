@@ -48,6 +48,10 @@ h3 {
     margin: 3px
 }
 
+h3.proj-card-title {
+    color: var(--chalk-faint);
+}
+
 #initials {
     cursor: pointer;
     font-size: 50px;
@@ -111,7 +115,6 @@ p {
     padding: 15px;
     margin: 15px 0;
     transition: 0.3s;
-    width: 33%;
 }
 
 .proj-card:hover {
@@ -150,4 +153,25 @@ h6 {
     color: var(--chalk-dim);
     font-weight: 200;
     margin-top: 100px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-box {
+    background: var(--board);
+    color: var(--chalk);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+#closeModal {
+    cursor: pointer;
 }
