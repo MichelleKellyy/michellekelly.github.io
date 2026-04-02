@@ -78,7 +78,6 @@ b {
     font-weight: 600;
 }
 
-/* --- NAVIGATION --- */
 nav {
     position: sticky;
     top: 0;
@@ -119,7 +118,6 @@ nav a.active {
     margin-right: auto;
 }
 
-/* --- FOOTER --- */
 footer {
     display: flex;
     flex-direction: column;
@@ -156,7 +154,6 @@ footer a:hover {
     letter-spacing: 0.03em;
 }
 
-/* --- MORE ABOUT ME TOGGLE (HOME) --- */
 .more-section {
     margin-top: 10px;
 }
@@ -224,7 +221,6 @@ footer a:hover {
     line-height: 1.7;
 }
 
-/* --- PHOTO GALLERY (HOME) --- */
 .gallery-wrapper {
     position: relative;
     margin: 10px 0;
@@ -296,7 +292,6 @@ footer a:hover {
     transform: scale(1.02); 
 }
 
-/* --- EXPERIENCE PAGE ACCORDIONS --- */
 details {
     border-top: 2px solid var(--border);
     border-bottom: 2px solid var(--border);
