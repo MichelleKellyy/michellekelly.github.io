@@ -22,6 +22,10 @@ html {
   scrollbar-width: none;
 }
 
+main {
+    margin-bottom: 40px;
+}
+
 body {
     font-family: "Space Grotesk", sans-serif;
     color: var(--accent);
@@ -74,6 +78,7 @@ b {
     font-weight: 600;
 }
 
+/* --- NAVIGATION --- */
 nav {
     position: sticky;
     top: 0;
@@ -114,6 +119,7 @@ nav a.active {
     margin-right: auto;
 }
 
+/* --- FOOTER --- */
 footer {
     display: flex;
     flex-direction: column;
@@ -150,9 +156,9 @@ footer a:hover {
     letter-spacing: 0.03em;
 }
 
+/* --- MORE ABOUT ME TOGGLE (HOME) --- */
 .more-section {
     margin-top: 10px;
-    max-width: 650px;
 }
 
 .more-toggle {
@@ -185,9 +191,9 @@ footer a:hover {
 
 .more-content {
     display: none;
-    margin-top: 25px;
-    padding-top: 25px;
-    border-top: 1px dashed var(--border-dash);
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 @keyframes fadeSlideDown {
@@ -218,10 +224,11 @@ footer a:hover {
     line-height: 1.7;
 }
 
+/* --- PHOTO GALLERY (HOME) --- */
 .gallery-wrapper {
-    position: relative; 
-    margin-bottom: 10px;
-    margin-top: 10px;
+    position: relative;
+    margin: 10px 0;
+    padding: 0 12px;
 }
 
 .scroll-btn {
@@ -260,13 +267,12 @@ footer a:hover {
 #photoScroller {
     display: flex;
     gap: 15px;
-    overflow-x: auto; 
-    padding-bottom: 5px;
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; 
-    
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    overflow-x: auto;
+    padding: 3px 4px 8px 4px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 #photoScroller::-webkit-scrollbar {
@@ -290,13 +296,91 @@ footer a:hover {
     transform: scale(1.02); 
 }
 
+/* --- EXPERIENCE PAGE ACCORDIONS --- */
 details {
-    border-bottom: 1px dashed var(--border-dash);
-    padding: 22px 0;
+    border-top: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
+    border-left: none; 
+    border-right: none;
+    border-radius: 15px; 
+    padding: 22px 15px; 
+    margin-bottom: 20px; 
     transition: all 0.2s ease;
 }
 
 details:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
+details[open] .exp-bullets {
+    animation: fadeSlideDown 0.4s ease forwards;
+}
+
+summary {
+    list-style: none; 
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none; 
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.exp-role {
+    font-size: 20px;
+    margin: 0;
+    color: var(--white-white);
+    transition: color 0.2s ease;
+}
+
+.exp-date {
+    color: var(--white-dim);
+    font-size: 15px;
+    font-family: monospace; 
+}
+
+a.exp-company {
+    display: inline-block;
+    color: var(--white-dim);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    z-index: 2;
+    position: relative;
+}
+
+a.exp-company:hover {
+    color: var(--accent);
+}
+
+span.exp-company {
+    color: var(--white-dim);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.exp-bullets {
+    margin-top: 18px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    color: var(--white);
+    list-style-type: square; 
+}
+
+.exp-bullets li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.exp-bullets li:last-child {
+    margin-bottom: 0;
+}
