@@ -19,28 +19,47 @@
         <main>
             <h1>Glad you could make it.</h1>
             <p class="intro">I'm <b>Michelle Kelly</b> — a Computer Science student at Queen's University who looks for problems and tries to solve them.</p>
+            <p> I'm always down to meet new people, team up and build some cool stuff together! Feel free to reach out! </p>
             
             <section class="more-section">
-                <button id="moreToggle">More about me ↓</button>
+                <button class="more-toggle" id="moreToggle" aria-expanded="false" aria-controls="moreContent">
+                    More about me <span class="toggle-symbol">↓</span>
+                </button>
 
-                <div id="moreContent">
+                <div class="more-content" id="moreContent">
                     <div>
-                        <h3>Recently</h3>
-                        <p>Building this website, prepping for exams, and coming up with some new project ideas!</p>
+                        <h3 class="more-label">Recently</h3>
+                        <p>Procrastinating for exams by building this website, and coming up with a new project idea for the summer!</p>
                     </div>
 
                     <div>
-                        <h3>Early Work</h3>
+                        <h3 class="more-label">Early Work</h3>
                         <p>From teaching coding young to building online communities, I’ve always liked creating things.</p>
                     </div>
 
                     <div>
-                        <h3>Off Screen</h3>
-                        <p>You can find me out on a <a href="https://strava.app.link/ux0OuO1lu1b" target="_blank">run, at the gym</a>, playing the guitar, or <a href="https://www.goodreads.com/user/show/199782084" target="_blank">diving into a good book</a>. Feel free to reach out if you'd like to connect, always happy to chat or collaborate!</p>
+                        <h3 class="more-label">Off Screen</h3>
+                        <p>You can find me out on a <a href="https://strava.app.link/ux0OuO1lu1b" target="_blank">run, at the gym</a>, playing the guitar, or <a href="https://www.goodreads.com/user/show/199782084" target="_blank">diving into a good book</a>.</p>
+                    </div>
+
+                    <div class="gallery-wrapper">
+                        <button class="scroll-btn left-btn" id="scrollLeft">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        
+                        <div id="photoScroller">
+                            <img src="assets/img/running2.jpg" alt="Post-race">
+                            <img src="assets/img/bikes.jpg" alt="Post triathalon bike ride">
+                            <img src="assets/img/caving.jpg" alt="Caving">
+                            <img src="assets/img/speaking.jpg" alt="Speaking at CUCAI conference">
+                        </div>
+                        
+                        <button class="scroll-btn right-btn" id="scrollRight">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer>

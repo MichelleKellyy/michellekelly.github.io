@@ -13,6 +13,15 @@
     --green:        #7eb594;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
     font-family: "Space Grotesk", sans-serif;
     color: var(--accent);
@@ -60,6 +69,11 @@ p a:hover {
     color: var(--accent);
 }
 
+b {
+    color: var(--accent);
+    font-weight: 600;
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -84,7 +98,13 @@ nav a {
 }
 
 nav a:hover {
+    color: var(--white);
+}
+
+nav a.active {
     color: var(--accent);
+    font-weight: 700;
+    pointer-events: none; 
 }
 
 .initial {
@@ -92,10 +112,6 @@ nav a:hover {
     color: var(--accent);
     font-weight: 700;
     margin-right: auto;
-}
-
-.current-page {
-    font-weight: 700;
 }
 
 footer {
@@ -135,45 +151,152 @@ footer a:hover {
 }
 
 .more-section {
-    margin-top: 40px;
+    margin-top: 10px;
     max-width: 650px;
 }
 
-#moreToggle {
+.more-toggle {
     background: none;
     border: none;
     padding: 0;
-    font: inherit;
+    font-family: inherit;
     color: var(--white-dim);
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
 }
 
-#moreToggle:hover {
+.more-toggle:hover {
     color: var(--accent);
 }
 
-#moreContent {
+.toggle-symbol {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.more-toggle.open .toggle-symbol {
+    transform: rotate(180deg);
+}
+
+.more-content {
     display: none;
-    margin-top: 20px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--border-dash);
 }
 
-#moreContent.show {
-    display: block;
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-#moreContent div {
-    margin-bottom: 20px;
+.more-content.show {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: fadeSlideDown 0.4s ease forwards;
 }
 
-#moreContent h3 {
+.more-label {
     font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--white-dim);
-    margin-bottom: 8px;
+    color: var(--white-faint);
+    margin-top: 0;
+    margin-bottom: 6px;
 }
 
-#moreContent p {
+.more-content p {
     margin: 0;
     font-size: 16px;
+    line-height: 1.7;
 }
+
+.gallery-wrapper {
+    position: relative; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(25, 27, 29, 0.7); 
+    backdrop-filter: blur(4px);
+    color: var(--white-dim);
+    border: 1px solid var(--border);
+    border-radius: 8px; 
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.left-btn { left: -15px; }
+.right-btn { right: -15px; }
+
+.scroll-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background-color: var(--board);
+}
+
+.scroll-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+#photoScroller {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; 
+    padding-bottom: 5px;
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+#photoScroller::-webkit-scrollbar {
+    display: none; 
+}
+
+#photoScroller img {
+    height: 250px; 
+    width: auto; 
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    scroll-snap-align: start; 
+    filter: grayscale(100%) brightness(70%);
+    transition: all 0.4s ease;
+}
+
+#photoScroller img:hover {
+    filter: grayscale(0%) brightness(100%);
+    border-color: var(--accent); 
+    transform: scale(1.02); 
+}
+
+details {
+    border-bottom: 1px dashed var(--border-dash);
+    padding: 22px 0;
+    transition: all 0.2s ease;
+}
+
+details:last-child {
+    border-bottom: none;
+}
+
