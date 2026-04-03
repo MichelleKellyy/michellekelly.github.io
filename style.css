@@ -205,7 +205,7 @@ footer a:hover {
 }
 
 .more-label {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -294,13 +294,17 @@ footer a:hover {
 summary {
     list-style: none; 
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 18px; 
+    display: block; 
 }
 
 summary::-webkit-details-marker {
     display: none; 
+}
+
+summary:has(.exp-logo) {
+    display: flex;
+    align-items: center;
+    gap: 18px; 
 }
 
 .exp-info {
@@ -360,7 +364,7 @@ details[open] .exp-bullets {
     color: var(--white-faint);
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: 600px;
+    font-weight: 600;
     letter-spacing: 0.12em;
 }
 
@@ -404,3 +408,60 @@ span.exp-company {
     margin-bottom: 0;
 }
 
+.preview-text {
+    font-size: 15px;
+    color: var(--white-dim);
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tags span {
+    font-size: 12px;
+    font-family: monospace;
+    color: var(--accent);
+    background-color: rgba(230, 199, 110, 0.08); 
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(230, 199, 110, 0.15);
+}
+
+.expanded-content {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.expanded-text {
+    flex: 1;
+}
+
+.project-demo-img {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .expanded-content {
+        flex-direction: column;
+    }
+    .project-demo-img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 5px;
+}

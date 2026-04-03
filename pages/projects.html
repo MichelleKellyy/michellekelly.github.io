@@ -6,19 +6,191 @@
     <link rel="stylesheet" href='../style.css'>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src='../script.js' defer></script>
-    <title>MK</title>
+    <title>Projects - MK</title>
 </head>
 <body>
     <div class='screen'>
         <nav>
             <a class="initial" href="../index.html">MK</a>
             <a href="experience.html">Experience</a>
-            <a class="active" href="projects.html">Projects</a>
+            <a href="projects.html" class="active">Projects</a>
         </nav>
 
-        <main>
-            <h1>Projects</h1>
-            <p> Some projects I've worked on</p>
+        <main>            
+            <h1>AI / ML</h1>
+            <div class="exp-list">
+                
+                <details>
+                    <summary>
+                        <div class="exp-header" style="margin-bottom: 12px;">
+                            <h2 class="exp-role">Symbolic Music Genre Transfer</h2>
+                            <span class="exp-date">Research</span>
+                        </div>
+                        <p class="preview-text">Forked and contributed to DAIR initiatives to develop instrument-specific symbolic music genre transfer utilizing machine learning models.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </summary>
+                    
+                    <div class="exp-bullets">
+                        <div class="expanded-content">
+                            <div class="expanded-text">
+                                <ul style="margin-top: 0; padding-left: 20px;">
+                                    <li>Researched and implemented PyTorch-based Variational Autoencoders using LSTM modules.</li>
+                                    <li>Utilized adversarial disentanglement techniques to successfully transfer specific music genres.</li>
+                                    <li>Co-authored and published findings in the CUCAI 2025 Proceedings.</li>
+                                </ul>
+                            </div>
+                            <img src="../assets/img/smgt.jpg" alt="Music Genre Transfer Demo" class="project-demo-img">
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/Jakefeldmanstarosta/DAIR-Music-Genre-Transfer" target="_blank" class="exp-company">View Repository ↗</a>
+                            <a href="#" target="_blank" class="exp-company">View Publication ↗</a>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+
+            <h1 style="margin-top: 50px;">Web Apps</h1>
+            <div class="exp-list">
+                
+                <details>
+                    <summary>
+                        <div class="exp-header" style="margin-bottom: 12px;">
+                            <h2 class="exp-role">ConnectKingston</h2>
+                            <span class="exp-date">Hackathon</span>
+                        </div>
+                        <p class="preview-text">An AI-powered matching platform helping Kingston residents discover volunteer opportunities tailored to their interests.</p>
+                        <div class="tech-tags">
+                            <span>JavaScript</span>
+                            <span>AI Integration</span>
+                        </div>
+                    </summary>
+                    <div class="exp-bullets">
+                        <div class="expanded-content">
+                            <div class="expanded-text">
+                                <ul style="margin-top: 0; padding-left: 20px;">
+                                    <li>Developed at KingHacks 2026 to centralize community involvement.</li>
+                                    <li>Integrated a Large Language Model (LLM) to parse user profiles and deliver highly personalized recommendations.</li>
+                                </ul>
+                            </div>
+                            </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/MichelleKellyy/ConnectKingston" target="_blank" class="exp-company">View Repository ↗</a>
+                            <a href="#" target="_blank" class="exp-company">Live Demo ↗</a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        <div class="exp-header" style="margin-bottom: 12px;">
+                            <h2 class="exp-role">FaceShield</h2>
+                            <span class="exp-date">Hackathon</span>
+                        </div>
+                        <p class="preview-text">An app that analyzes facial vulnerability to AI recognition and cloaks images using near-invisible privacy-preserving transformations.</p>
+                        <div class="tech-tags">
+                            <span>JavaScript</span>
+                            <span>Adversarial AI</span>
+                            <span>Image Processing</span>
+                        </div>
+                    </summary>
+                    <div class="exp-bullets">
+                        <div class="expanded-content">
+                            <div class="expanded-text">
+                                <ul style="margin-top: 0; padding-left: 20px;">
+                                    <li>Built custom adversarial algorithms to disrupt facial recognition systems without heavily degrading image quality.</li>
+                                    <li>Implemented a before-and-after protection scoring system to quantify privacy gains.</li>
+                                </ul>
+                            </div>
+                            <img src="../assets/img/faceshield-demo.png" alt="FaceShield Demo" class="project-demo-img">
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/MichelleKellyy/FaceShield" target="_blank" class="exp-company">View Repository ↗</a>
+                            <a href="#" target="_blank" class="exp-company">Read Case Study ↗</a>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+
+            <h1 style="margin-top: 50px;">Game Development</h1>
+            <div class="exp-list">
+                
+                <details>
+                    <summary>
+                        <div class="exp-header" style="margin-bottom: 12px;">
+                            <h2 class="exp-role">Silver-Bullet</h2>
+                            <span class="exp-date">Class</span>
+                        </div>
+                        <p class="preview-text">A procedurally generated dungeon crawler built around a unique physics mechanic: one bullet and one magnetic glove.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>ShaderLab</span>
+                            <span>Procedural Gen</span>
+                        </div>
+                    </summary>
+                    <div class="exp-bullets">
+                        <div class="expanded-content">
+                            <div class="expanded-text">
+                                <ul style="margin-top: 0; padding-left: 20px;">
+                                    <li>Engineered custom magnetic physics allowing players to recall bullets, pull metal objects, and manipulate enemy armor.</li>
+                                    <li>Wrote custom ShaderLab scripts to handle dynamic lighting and environmental effects.</li>
+                                </ul>
+                            </div>
+                            <img src="../assets/img/silver-bullet-demo.png" alt="Silver Bullet Gameplay" class="project-demo-img">
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/MichelleKellyy/Silver-Bullet" target="_blank" class="exp-company">View Repository ↗</a>
+                            <a href="#" target="_blank" class="exp-company">Play WebGL Build ↗</a>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+
+            <h1 style="margin-top: 50px;">Automation & Scripts</h1>
+            <div class="exp-list">
+                
+                <details>
+                    <summary>
+                        <div class="exp-header" style="margin-bottom: 12px;">
+                            <h2 class="exp-role">CRM Lead Automation Agent</h2>
+                            <span class="exp-date">Personal</span>
+                        </div>
+                        <p class="preview-text">A private automation script that monitors new CRM lead events and triggers near-real-time follow-up workflows.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>REST APIs</span>
+                            <span>Railway</span>
+                            <span>SMTP</span>
+                        </div>
+                    </summary>
+                    <div class="exp-bullets">
+                        <div class="expanded-content">
+                            <div class="expanded-text">
+                                <ul style="margin-top: 0; padding-left: 20px;">
+                                    <li>Integrated mitmproxy and Google Sheets APIs to automate event logging.</li>
+                                    <li>Deployed to the cloud via Railway, significantly improving response speeds and eliminating the need for manual checking.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <span class="exp-company" style="color: var(--white-faint); cursor: default;">Private Repository</span>
+                            <span class="exp-company" style="color: var(--white-faint); cursor: default;">Internal Tool</span>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+
         </main>
 
         <footer>
@@ -26,7 +198,7 @@
                 <a href="mailto:michelle.kelly@queensu.ca">Email ↗</a>
                 <a href="https://github.com/MichelleKellyy" target="_blank">GitHub ↗</a>
                 <a href="https://www.linkedin.com/in/michellebkelly" target="_blank">LinkedIn ↗</a>
-                <a href="resume.pdf" download>Resume ↗</a>
+                <a href="../resume.pdf" download>Resume ↗</a>
             </div>
             <div class="footer-note">© 2026 Michelle Kelly</div>
         </footer>
