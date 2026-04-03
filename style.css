@@ -7,10 +7,11 @@
     --white-dim:    #96918b;
     --white-faint:  #474441;
     --white-white:  #f0ebe3;
-    --accent:       #e6c76e;
+    --yellow:       #e6c76e;
     --red:          #cf7368;
     --blue:         #76a8d0;
     --green:        #7eb594;
+    --accent:       #e38bb0;
 }
 
 html::-webkit-scrollbar {
@@ -23,7 +24,7 @@ html {
 }
 
 main {
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
     color: var(--accent);
     background-color: #0c0d0e; 
     margin: 0;
-    padding: 20px;
+    padding: 24px;
 }
 
 .screen {
@@ -43,16 +44,16 @@ body {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
-    margin: 16px 0 12px 0;
+    margin: 16px 0 8px 0;
     line-height: 1.1;
 }
 
 .intro {
     font-size: 19px;
     color: var(--white-white);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 p {
@@ -83,14 +84,14 @@ nav {
     top: 0;
     z-index: 10;
     background-color: #0c0d0e;
-    padding: 10px 15px 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 8px 16px 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
     border-bottom: 3px solid var(--accent);
-    border-radius: 10px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 nav a {
@@ -122,11 +123,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     margin-top: auto;
-    padding: 30px 0 20px;
+    padding: 32px 0 24px;
     border-top: 3px solid var(--accent);
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 footer a {
@@ -142,20 +143,20 @@ footer a:hover {
 
 .footer-links {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .footer-note {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 13px;
     color: var(--white-faint);
     letter-spacing: 0.03em;
 }
 
 .more-section {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .more-toggle {
@@ -188,8 +189,8 @@ footer a:hover {
 
 .more-content {
     display: none;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 8px;
+    padding-top: 8px;
 }
 
 @keyframes fadeSlideDown {
@@ -200,8 +201,8 @@ footer a:hover {
 .more-content.show {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    animation: fadeSlideDown 0.4s ease forwards;
+    gap: 24px;
+    /* animation: fadeSlideDown 0.4s ease forwards; */
 }
 
 .more-label {
@@ -211,7 +212,7 @@ footer a:hover {
     letter-spacing: 0.12em;
     color: var(--white-faint);
     margin-top: 0;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .more-content p {
@@ -222,48 +223,46 @@ footer a:hover {
 
 .gallery-wrapper {
     position: relative;
-    margin: 10px 0;
-    padding: 0 12px;
+    margin: 16px 0;
+    padding: 0 16px;
 }
 
 .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(25, 27, 29, 0.7); 
-    backdrop-filter: blur(4px);
+    background: transparent; /* No background at all */
     color: var(--white-dim);
-    border: 1px solid var(--border);
-    border-radius: 8px; 
+    border: none;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: monospace;
     width: 40px;
     height: 40px;
-    cursor: pointer;
-    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.left-btn { left: -15px; }
-.right-btn { right: -15px; }
+.left-btn { left: -24px; }
+.right-btn { right: -24px; }
 
 .scroll-btn:hover {
     color: var(--accent);
-    border-color: var(--accent);
-    background-color: var(--board);
 }
 
-.scroll-btn svg {
-    width: 20px;
-    height: 20px;
-}
+.left-btn:hover { transform: translateY(-50%) translateX(-4px); }
+.right-btn:hover { transform: translateY(-50%) translateX(4px); }
+
 
 #photoScroller {
     display: flex;
-    gap: 15px;
+    gap: 16px;
     overflow-x: auto;
-    padding: 3px 4px 8px 4px;
+    padding: 4px 4px 8px 4px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -277,7 +276,7 @@ footer a:hover {
 #photoScroller img {
     height: 250px; 
     width: auto; 
-    border-radius: 10px;
+    border-radius: 8px;
     border: 2px solid var(--border);
     cursor: pointer;
     scroll-snap-align: start; 
@@ -304,7 +303,7 @@ summary::-webkit-details-marker {
 summary:has(.exp-logo) {
     display: flex;
     align-items: center;
-    gap: 18px; 
+    gap: 16px; 
 }
 
 .exp-info {
@@ -312,8 +311,8 @@ summary:has(.exp-logo) {
 }
 
 .exp-logo {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     border-radius: 8px; 
     object-fit: cover;
     background-color: var(--raised); 
@@ -332,9 +331,9 @@ details {
     border-bottom: 2px solid var(--border);
     border-left: none; 
     border-right: none;
-    border-radius: 15px; 
-    padding: 22px 15px; 
-    margin-bottom: 20px; 
+    border-radius: 16px; 
+    padding: 24px 16px; 
+    margin-bottom: 24px; 
     transition: all 0.2s ease;
 }
 
@@ -342,15 +341,11 @@ details:last-child {
     margin-bottom: 0;
 }
 
-details[open] .exp-bullets {
-    animation: fadeSlideDown 0.4s ease forwards;
-}
-
 .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .exp-role {
@@ -390,9 +385,9 @@ span.exp-company {
 }
 
 .exp-bullets {
-    margin-top: 18px;
+    margin-top: 16px;
     margin-bottom: 0;
-    padding-left: 20px;
+    padding-left: 24px;
     color: var(--white);
     list-style-type: square; 
 }
@@ -400,7 +395,7 @@ span.exp-company {
 .exp-bullets li {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--white);
 }
 
@@ -423,19 +418,17 @@ span.exp-company {
 
 .tech-tags span {
     font-size: 12px;
-    font-family: monospace;
     color: var(--accent);
-    background-color: rgba(230, 199, 110, 0.08); 
-    padding: 5px 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(230, 199, 110, 0.15);
+    background-color: rgba(227, 139, 176, 0.1);
+    padding: 4px 8px;
+    border-radius: 8px;
 }
 
 .expanded-content {
     display: flex;
-    gap: 25px;
+    gap: 24px;
     align-items: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .expanded-text {
@@ -461,7 +454,7 @@ span.exp-company {
 
 .project-links {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: wrap;
-    padding-top: 5px;
+    padding-top: 8px;
 }
