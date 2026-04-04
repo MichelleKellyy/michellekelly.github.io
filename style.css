@@ -7,11 +7,11 @@
     --white-dim:    #96918b;
     --white-faint:  #474441;
     --white-white:  #f0ebe3;
-    --yellow:       #e6c76e;
+    --accent:       #e6c76e;
     --red:          #cf7368;
     --blue:         #76a8d0;
     --green:        #7eb594;
-    --accent:       #e38bb0;
+    --pink:       #e38bb0;
 }
 
 html::-webkit-scrollbar {
@@ -174,8 +174,32 @@ footer a:hover {
     transition: color 0.2s ease;
 }
 
+.more-toggle span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    animation: arrowBounce 2.5s infinite;
+    font-size: 20px;
+}
+
+@keyframes arrowBounce {
+    0%, 80%, 100% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(4px);
+    }
+}
+
+.more-toggle:hover span {
+    animation: none;
+}
+
 .more-toggle:hover {
     color: var(--accent);
+}
+
+.more-toggle.clicked span {
+    animation: none;
 }
 
 .toggle-symbol {
@@ -231,7 +255,7 @@ footer a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent; /* No background at all */
+    background: transparent;
     color: var(--white-dim);
     border: none;
     font-size: 24px;
@@ -419,7 +443,7 @@ span.exp-company {
 .tech-tags span {
     font-size: 12px;
     color: var(--accent);
-    background-color: rgba(227, 139, 176, 0.1);
+    background-color: rgba(230, 199, 110, 0.1);
     padding: 4px 8px;
     border-radius: 8px;
 }

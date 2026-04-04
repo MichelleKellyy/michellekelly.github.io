@@ -3,6 +3,7 @@ const content = document.getElementById("moreContent");
 
 button.addEventListener("click", () => {
     content.classList.toggle("show");
+    button.classList.add("clicked");
 });
 
 const scroller = document.getElementById('photoScroller');
